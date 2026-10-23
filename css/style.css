@@ -30,7 +30,7 @@ a{color:inherit;text-decoration:none}
 .theme-toggle:hover{border-color:var(--ember);color:#fff}
 .theme-icon{font-size:1rem;line-height:1}
 .nav-links{display:flex;gap:2.2rem;list-style:none;margin:0;padding:0}
-.nav-links a{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-soft);transition:color .3s;position:relative}
+.nav-links a{display:block;padding:.45rem .65rem;font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-soft);transition:color .3s;position:relative}
 .nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;height:1px;width:0;background:var(--ember);transition:width .3s}
 .nav-links a:hover,.nav-links a.active{color:#fff}
 .nav-links a:hover::after,.nav-links a.active::after{width:100%}
@@ -191,7 +191,7 @@ a{color:inherit;text-decoration:none}
 [data-theme="light"] .theme-toggle{border:0;box-shadow:var(--raised-sm);color:var(--accent,var(--blue))}
 [data-theme="light"] .theme-toggle:hover{color:var(--ink)}
 [data-theme="light"] .nav-links{gap:.5rem}
-[data-theme="light"] .nav-links a{padding:.55rem 1.1rem;border-radius:30px}
+[data-theme="light"] .nav-links a{padding:.65rem 1.25rem;border-radius:30px}
 [data-theme="light"] .nav-links a:hover{color:var(--ink);box-shadow:var(--raised-sm)}
 [data-theme="light"] .nav-links a.active{color:var(--blue);box-shadow:var(--inset-sm)}
 [data-theme="light"] .hero{background:var(--bg)}
@@ -252,6 +252,15 @@ a{color:inherit;text-decoration:none}
 
 @media (max-width:991px){
   .theme-toggle{margin-left:auto;margin-right:.7rem}
-  [data-theme="light"] .nav-links{border-radius:0;background:var(--bg)}
-  [data-theme="light"] .nav-links a{padding:.8rem 2rem;box-shadow:var(--raised-sm)}
+  .site-nav{padding:.8rem 1rem}
+  .nav-logo,.theme-toggle,.nav-toggle{position:relative;z-index:2}
+  .theme-toggle{flex-shrink:0}
+  .theme-label{display:none}
+  .nav-links{z-index:1;visibility:hidden;padding:5rem 1.5rem 2rem;gap:1rem}
+  .nav-links.open{visibility:visible}
+  .nav-links li{display:block}
+  .nav-links a{display:block;color:var(--ink);font-size:1rem;line-height:1.2;letter-spacing:.24em;padding:.65rem 2rem}
+  [data-theme="light"] .site-nav{left:14px;right:14px;width:auto;transform:none}
+  [data-theme="light"] .nav-links{gap:1.5rem;border-radius:0;background:var(--bg)}
+  [data-theme="light"] .nav-links a{box-shadow:var(--raised-sm)}
 }
