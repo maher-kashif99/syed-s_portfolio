@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Syed Haseeb Haider | Motion Designer &amp; CGI Artist</title>
+  <meta name="description" content="Portfolio of Syed Haseeb Haider - motion designer, CGI artist, 3D world builder, graphic designer and content creator.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Letterbox bars + progress -->
+  <div class="bar bar-top"></div>
+  <div class="bar bar-bottom"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navigation -->
+  <nav class="site-nav" id="siteNav">
+    <a href="#home" class="nav-logo">S H H</a>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to day view" aria-pressed="false">
+      <span class="theme-icon" aria-hidden="true">☼</span>
+      <span class="theme-label">Day view</span>
+    </button>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#reel">Reel</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home" class="hero">
+    <canvas id="orbCanvas"></canvas>
+    <div class="hero-text">
+      <h1 class="hero-name">Syed Haseeb Haider</h1>
+      <p class="hero-sub"><span>Motion Designer</span><i>|</i><span>CGI Artist</span><i>|</i><span>3D Creator</span></p>
+    </div>
+    <ul class="hero-menu">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#reel">Reel</a></li>
+      <li><a href="#about">Info</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#work" class="scroll-hint" aria-label="Scroll down"><span></span></a>
+  </header>
+
+  <!-- WORK -->
+  <section id="work" class="section">
+    <div class="container">
+      <p class="eyebrow reveal">Selected Work</p>
+      <h2 class="section-title reveal">Worlds built frame by frame</h2>
+
+      <div class="filters reveal" id="filters">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="motion">Motion</button>
+        <button class="filter" data-filter="cgi">CGI</button>
+        <button class="filter" data-filter="world">3D World</button>
+        <button class="filter" data-filter="graphic">Graphic</button>
+        <button class="filter" data-filter="animation">Animation</button>
+      </div>
+
+      <div class="row g-4" id="workGrid">
+        <!-- Replace the .thumb background (or add an <img>) with real project stills -->
+        <div class="col-md-6 col-lg-4 work-item" data-cat="motion">
+          <article class="card-work" data-title="Neon Pulse" data-cat="Motion Design" data-desc="A kinetic typography and light-streak piece built around rhythm and speed.">
+            <div class="thumb t1"><span class="play"></span></div>
+            <div class="meta"><h3>Neon Pulse</h3><span>Motion Design</span></div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4 work-item" data-cat="cgi">
+          <article class="card-work" data-title="Chrome Genesis" data-cat="CGI" data-desc="Photoreal product CGI with studio lighting, reflections and macro detail.">
+            <div class="thumb t2"><span class="play"></span></div>
+            <div class="meta"><h3>Chrome Genesis</h3><span>CGI</span></div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4 work-item" data-cat="world">
+          <article class="card-work" data-title="Lost Horizon" data-cat="3D World" data-desc="An atmospheric environment: sculpted terrain, volumetric fog and cinematic camera moves.">
+            <div class="thumb t3"><span class="play"></span></div>
+            <div class="meta"><h3>Lost Horizon</h3><span>3D World</span></div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4 work-item" data-cat="graphic">
+          <article class="card-work" data-title="Brand Identity Set" data-cat="Graphic Design" data-desc="Logo, colour system and social assets for a modern creative brand.">
+            <div class="thumb t4"><span class="play"></span></div>
+            <div class="meta"><h3>Brand Identity Set</h3><span>Graphic Design</span></div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4 work-item" data-cat="animation">
+          <article class="card-work" data-title="Little Ember" data-cat="Animation" data-desc="A short character animation focused on expressive timing and storytelling.">
+            <div class="thumb t5"><span class="play"></span></div>
+            <div class="meta"><h3>Little Ember</h3><span>Animation</span></div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4 work-item" data-cat="motion cgi">
+          <article class="card-work" data-title="Title Sequence 01" data-cat="Motion + CGI" data-desc="A cinematic title sequence blending 3D elements with refined motion graphics.">
+            <div class="thumb t6"><span class="play"></span></div>
+            <div class="meta"><h3>Title Sequence 01</h3><span>Motion + CGI</span></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section section-alt">
+    <div class="container">
+      <p class="eyebrow reveal">What I Do</p>
+      <h2 class="section-title reveal">Services</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 reveal"><div class="service"><span class="num">01</span><h3>Motion Design</h3><p>Logo stings, explainers, title sequences and social motion with deliberate pacing and polish.</p></div></div>
+        <div class="col-md-6 col-lg-4 reveal"><div class="service"><span class="num">02</span><h3>CGI &amp; VFX</h3><p>Photoreal product shots, compositing and effects that sit naturally in live footage or on their own.</p></div></div>
+        <div class="col-md-6 col-lg-4 reveal"><div class="service"><span class="num">03</span><h3>3D World Building</h3><p>Environments, props and scenes, lit and rendered for film, games or brand storytelling.</p></div></div>
+        <div class="col-md-6 col-lg-4 reveal"><div class="service"><span class="num">04</span><h3>Graphic &amp; Visual Design</h3><p>Brand identity, posters, thumbnails and key art with a strong visual language.</p></div></div>
+        <div class="col-md-6 col-lg-4 reveal"><div class="service"><span class="num">05</span><h3>Animation</h3><p>2D and 3D character and object animation with expressive timing.</p></div></div>
+        <div class="col-md-6 col-lg-4 reveal"><div class="service"><span class="num">06</span><h3>Content Creation</h3><p>Short-form video and visual content built to hold attention across platforms.</p></div></div>
+      </div>
+
+      <div class="tools reveal">
+        <p class="eyebrow">Toolkit</p>
+        <div class="chips">
+          <span>After Effects</span><span>Blender</span><span>Cinema 4D</span><span>Premiere Pro</span><span>Photoshop</span><span>Illustrator</span><span>DaVinci Resolve</span><span>Substance</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REEL -->
+  <section id="reel" class="section">
+    <div class="container">
+      <p class="eyebrow reveal">Showreel</p>
+      <h2 class="section-title reveal">The reel</h2>
+      <!-- Replace data-src with a YouTube/Vimeo embed URL, e.g. https://www.youtube.com/embed/VIDEO_ID -->
+      <div class="reel-frame reveal" id="reelFrame" data-src="">
+        <div class="reel-poster"><button class="reel-play" id="reelPlay" aria-label="Play showreel"><span></span></button><p>Showreel 2026</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section section-alt">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5 reveal">
+          <div class="portrait"><span>SH</span></div>
+        </div>
+        <div class="col-lg-7 reveal">
+          <p class="eyebrow">About</p>
+          <h2 class="section-title">Syed Haseeb Haider</h2>
+          <p class="lead-text">I'm a motion designer and CGI artist who builds visuals that move, glow and tell a story.</p>
+          <p>From 3D worlds and animated sequences to graphic design and content creation, I blend technical craft with a strong eye for composition, light and rhythm. Every project starts with an idea and ends with a frame worth remembering.</p>
+          <div class="row stats g-3">
+            <div class="col-4"><strong data-count="50">0</strong><span>Projects</span></div>
+            <div class="col-4"><strong data-count="20">0</strong><span>Clients</span></div>
+            <div class="col-4"><strong data-count="5">0</strong><span>Years</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container contact">
+      <p class="eyebrow reveal">Contact</p>
+      <h2 class="section-title reveal">Let's make something cinematic</h2>
+      <div class="row g-5">
+        <div class="col-lg-5 reveal">
+          <p>Have a project in mind? Send a message and I'll get back to you soon.</p>
+          <ul class="contact-list">
+            <li><span>Email</span><a href="mailto:your@email.com">your@email.com</a></li>
+            <li><span>Instagram</span><a href="#">@yourhandle</a></li>
+            <li><span>Behance</span><a href="#">behance.net/yourname</a></li>
+            <li><span>YouTube</span><a href="#">youtube.com/@yourchannel</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-7 reveal">
+          <form id="contactForm" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6"><input type="text" class="form-control" id="cName" placeholder="Your name" required></div>
+              <div class="col-md-6"><input type="email" class="form-control" id="cEmail" placeholder="Email address" required></div>
+              <div class="col-12"><input type="text" class="form-control" id="cSubject" placeholder="Subject"></div>
+              <div class="col-12"><textarea class="form-control" id="cMessage" rows="5" placeholder="Tell me about your project" required></textarea></div>
+              <div class="col-12"><button type="submit" class="btn-glow">Send message</button><span class="form-status" id="formStatus"></span></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Syed Haseeb Haider. All rights reserved.</p>
+  </footer>
+
+  <!-- Project modal (Bootstrap) -->
+  <div class="modal fade" id="projectModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="modalTitle"></h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-visual" id="modalVisual"></div>
+          <p class="modal-cat" id="modalCat"></p>
+          <p id="modalDesc"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
