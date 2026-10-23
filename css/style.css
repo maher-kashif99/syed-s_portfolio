@@ -256,11 +256,11 @@ a{color:inherit;text-decoration:none}
   .nav-logo,.theme-toggle,.nav-toggle{position:relative;z-index:2}
   .theme-toggle{flex-shrink:0}
   .theme-label{display:none}
-  .nav-links{z-index:1;visibility:hidden;padding:5rem 1.5rem 2rem;gap:1rem}
+  .nav-links{z-index:1;visibility:hidden;padding:5rem 1.5rem 2rem;gap:1.5rem;row-gap:1.5rem}
   .nav-links.open{visibility:visible}
-  .nav-links li{display:block}
-  .nav-links a{display:block;color:var(--ink);font-size:1rem;line-height:1.2;letter-spacing:.24em;padding:.65rem 2rem}
+  .nav-links li{display:block;flex:0 0 auto;margin:0}
+  .nav-links a{display:block;position:static;width:max-content;color:var(--ink);font-size:1rem;line-height:1.2;letter-spacing:.24em;padding:.65rem 2rem}
   [data-theme="light"] .site-nav{left:14px;right:14px;width:auto;transform:none}
-  [data-theme="light"] .nav-links{gap:1.5rem;border-radius:0;background:var(--bg)}
+  [data-theme="light"] .nav-links{gap:1.5rem;row-gap:1.5rem;border-radius:0;background:var(--bg)}
   [data-theme="light"] .nav-links a{box-shadow:var(--raised-sm)}
 }

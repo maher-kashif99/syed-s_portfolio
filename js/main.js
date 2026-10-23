@@ -8,12 +8,6 @@
   /* ---------- Day/night theme ---------- */
   var themeToggle = document.getElementById('themeToggle');
   var root = document.documentElement;
-  var savedTheme = null;
-  try {
-    savedTheme = window.localStorage.getItem('portfolio-theme');
-  } catch (error) {
-    console.warn('Theme preference could not be restored.', error);
-  }
 
   function setTheme(theme) {
     var isLight = theme === 'light';
@@ -24,15 +18,10 @@
     themeToggle.querySelector('.theme-label').textContent = isLight ? 'Night view' : 'Day view';
   }
 
-  setTheme(savedTheme === 'light' ? 'light' : 'dark');
+  setTheme('dark');
   themeToggle.addEventListener('click', function () {
     var nextTheme = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
     setTheme(nextTheme);
-    try {
-      window.localStorage.setItem('portfolio-theme', nextTheme);
-    } catch (error) {
-      console.warn('Theme preference could not be saved.', error);
-    }
   });
 
   /* ---------- Hero orb (canvas) ---------- */
